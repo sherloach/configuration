@@ -1,0 +1,25 @@
+Plug 'sainnhe/gruvbox-material'
+
+" Theme
+if has('termguicolors')
+    set termguicolors
+endif
+
+syntax on
+set background=dark
+
+let g:gruvbox_material_background = 'hard'
+let g:lightline = {'colorscheme' : 'gruvbox_material'}
+
+augroup GruvboxMaterialCustom
+  autocmd!
+  autocmd ColorScheme gruvbox-material call SetColorOptions()
+  function SetColorOptions()
+    highlight Normal guibg=#040404
+    highlight EndOfBuffer guibg=#040404
+    highlight Comment gui=bold guifg=#8c7ae6
+    highlight LineNr guifg=#b0b846
+  endfunction
+augroup END
+
+colorscheme gruvbox-material
