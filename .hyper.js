@@ -27,7 +27,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(246,246,246,0.8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -43,7 +43,7 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#000',
+    backgroundColor: '#0a0a0a'	,
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -52,7 +52,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: ``,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -67,7 +67,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: '2px 1px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -99,15 +99,16 @@ module.exports = {
     // - Remove `--login` in shellArgs
     //
     // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
+    // - Example: `C:\\Program Files\\Git\\bin\\bash.exe`
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\Program Files\\Git\\bin\\bash.exe',
+    shell: '',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['--login'],
+    // shellArgs: ['--login'] (mac dinh)
+    shellArgs: ["/C", "C:\\Users\\USER\\hyperstart.bat"],
 
     // for environment variables
     env: {},
@@ -138,7 +139,12 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    opacity: 0.99
+    opacity: 1,
+
+    // gruvboxTheme: {
+    //style: 'dark', // or 'light'
+    //contrast: 'hard' // or 'soft', 'hard'
+    //},
   },
 
   // a list of plugins to fetch and install from npm
@@ -147,7 +153,11 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-firefox-devtools", "hyper-opacity"],
+  plugins: [
+	"hyper-opacity",
+	"hyperminimal",
+	"hyperterm-gruvbox-dark"
+	],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
@@ -157,5 +167,6 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+    'window:hamburgerMenu': 'alt'
   },
 };
