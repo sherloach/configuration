@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: '"SFMono Nerd Font", "FuraCode Nerd Font", Consolas',
+    fontFamily: '"SF Mono Medium", "SFMono Nerd Font", "FuraCode Nerd Font", Consolas',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -156,7 +156,8 @@ module.exports = {
   plugins: [
 	"hyper-opacity",
 	"hyperminimal",
-	"hyperterm-gruvbox-dark"
+	//"hyperterm-gruvbox-dark",
+	""
 	],
 
   // in development, you can create a directory under
