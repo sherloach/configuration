@@ -1,0 +1,6 @@
+USER\AppData\Local\nvim\init.vim
+
+USER\AppData\Local\nvim-data\site\bundle: plugins for Neovim
+
+~USER\hyperstart.bat: choose multiple option for Hyper (1. cmd, 2. vim, ....)
+~USER\.bashrc
