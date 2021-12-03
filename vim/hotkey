@@ -1,3 +1,84 @@
+rm -f: Ép buộc xoá file
+
+rmdir: bỏ một thư mục (rmdir ten_thumuc).
+rm -r / -ri: Xoá thư mục có chứa dữ liệu file và thư mục con / cần phải xác nhận
+rm -rf: Ép buộc xoá thư mục có chứa dữ liệu
+
+=========== Vim =============
+:e filename	: Mở filename với editor
+:w - lưu
+:q - để thoát (trong chế độ normal mode)
+:q! - Thoát mà không lưu
+:x - Viết vào file (nếu thay đổi đã được tạo) và thoát
+:sav [filename] - Lưu file dưới tên (filename)\
+:tabnew - mo tab moi
+:e $MYVIMRC
+:so % - reload vimrc
+
+a/i - che do insert
+Shift + i : chèn text ở đầu câu
+Shift + a : chèn text ở cuối câu
+
+dw - xoa 1 tu
+x - xoa 1 chu
+d$ - xoa den cuoi dong
+dd - xoa 1 dong
+[number]dd - xoa number dong
+gg + dG - xoa toan bo file
+:%d - xoa toan bo file
+
+<SHIFT> + . : tab (indent) dòng
+<SHIFT> + , : repeat tab (indent) dòng
+
+r - thay đổi ký tự
+cw - thay doi 1 tu dong thoi chuyen sang che do insert
+c$ - thay doi den cuoi dong
+
+H – Go to the first line of current screen.
+M – Go to the middle line of current screen.
+L – Go to the last line of current screen.
+ctrl+f – Jump forward one full screen.
+ctrl+b – Jump backwards one full screen.
+ctrl+d – Jump forward (down) a half screen.
+ctrl+u – Jump back (up) one half screen.
+
+gg - tro toi dau file
+G - tro toi cuoi file
+w - tro toi vi tri dau tien cua tu ke tiep
+W - tro toi vi tri khoang trang (blank space) tiep theo
+b - tro toi vi tri dau tien ben trai cua tu hien tai
+B - tro toi vi tri khoang trang (blank space) ben trai dau tien
+e - tro toi vi tri cuoi cung cua tu hien tai
+$ - tro toi vi tri cuoi cung cua dong
+0 - tro toi vi tri dau tien cua dong
+[number] k - tro toi dong number
+
+o - them 1 dong o duoi
+O - them 1 dong o tren
+
+y - copy
+yw - copy word
+yy - copy dong hien tai
+y$ - copy den cuoi dong
+D - copy den cuoi file
+p - paste
+u - hoan tac
+
+shift + v - Visual Line
+ctrl + v - Visual Block
+
+Vu - lowercase dong hien tai
+VU - uppercase dong hien tai
+g~~ - chuyen tu thanh uppercase va nguoc lai
+vEU - chuyen thanh uppercase den cuoi dong
+ggguG - tat ca chu trong file thanh lowercase
+
+/text - tim kiem
+/\cstring - tim kiem "string" ca chu hoa lan chu thuong
+n - chuyen den tu tim kiem duoc tiep theo
+ggn - to jump to the first match, or GN - to jump to the last./
+/noh - để hủy highligh
+
 Ctrl-y Moves screen up one line
 Ctrl-e Moves screen down one line
 Ctrl-u Moves cursor & screen up ½ page
