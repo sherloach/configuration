@@ -42,6 +42,12 @@ ctrl+b – Jump backwards one full screen.
 ctrl+d – Jump forward (down) a half screen.
 ctrl+u – Jump back (up) one half screen.
 
+Ctrl+ww - cycle though all windows
+Ctrl+wh - takes you left a window
+Ctrl+wj - takes you down a window
+Ctrl+wk - takes you up a window
+Ctrl+wl - takes you right a window
+
 gg - tro toi dau file
 G - tro toi cuoi file
 w - tro toi vi tri dau tien cua tu ke tiep
@@ -90,3 +96,12 @@ zz - move current line to the middle of the screen
 (Careful with zz, if you happen to have Caps Lock on accidentally, you will save and exit vim!)
 zt - move current line to the top of the screen
 zb - move current line to the bottom of the screen
+
+=========== Nerdtree =============
+Ctrl b - toggle nerdtree
+
+=========== fzf =============
+:Files - search files
+ctrl t - open file in new tab
+ctrl v - open file in vertical split
+ctrl x - open file in bottom split
