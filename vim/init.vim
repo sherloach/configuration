@@ -1,17 +1,11 @@
 call plug#begin('~/AppData/Local/nvim-data/site/bundle')
-
-Plug 'scrooloose/nerdtree'
-"Plug 'itchyny/lightline.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
+Plug 'preservim/nerdtree'
 Plug 'alvan/vim-closetag'
-
-" For Syntax
-"Plug 'pangloss/vim-javascript'
-Plug 'othree/html5.vim'
-Plug 'juvenn/mustache.vim'
-Plug 'briancollins/vim-jst'
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'honza/vim-snippets'
 call plug#end()
 
 "NERDTree
@@ -29,34 +23,37 @@ let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-" COC
-set updatetime=300
-nmap <silent> gd <Plug>(coc-definition)
-
-" Close tag
+"" Close tag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_emptyTags_caseSensitive = 1
+
+" fzf
+let g:fzf_preview_window = []
+let g:fzf_layout = { 'down': '40%' }
 
 " Theme
 syntax on
 set background=dark
 
-"""" Another
+" format
+set noswapfile
 set incsearch "search as characters are entered
 set hlsearch "highlights matching searcher
 set number
 set ruler
 set tabstop=2
 set shiftwidth=2
-"set expandtab
-"set nowrap
-set noswapfile
+set expandtab
+set ai
+set guicursor=i:block
+set autochdir "set the working directory as specific to the opened file.
 
-:imap jj <Esc>
+" switch tabs
 nnoremap tk  :tabnext<CR>
 nnoremap tj  :tabprev<CR>
 
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" switch buffers
+noremap <silent> <c-k> :wincmd k<CR>
+noremap <silent> <c-j> :wincmd j<CR>
+noremap <silent> <c-h> :wincmd h<CR>
+noremap <silent> <c-l> :wincmd l<CR>
