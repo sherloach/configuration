@@ -1,0 +1,25 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "editor.fontFamily": "'Rec Mono Linear', 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Prettier
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "[javascript, json, javascriptreact, typescript, typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Vim
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ]
+}
