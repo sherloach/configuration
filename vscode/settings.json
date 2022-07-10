@@ -1,10 +1,15 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "editor.fontFamily": "'Rec Mono Linear', 'Courier New', monospace",
+  "editor.fontFamily": "'Dank Mono', 'Hack', 'Roboto Mono Medium', 'Rec Mono Linear', monospace",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
   "editor.tabSize": 2,
-  "editor.fontSize": 12,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontLigatures": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorBlinking": "phase",
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 14,
 
   // Prettier
   "prettier.jsxSingleQuote": true,
@@ -14,12 +19,34 @@
   },
 
   // Vim
-  "vim.useSystemClipboard": true,
+  // "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
       "after": ["<Esc>"]
     }
-  ]
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    }
+  ],
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-w>": false
+  },
+
+  "terminal.integrated.fontSize": 13,
+  "explorer.compactFolders": false,
+  "workbench.colorTheme": "GitHub Dark Default"
 }

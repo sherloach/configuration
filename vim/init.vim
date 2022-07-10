@@ -15,6 +15,8 @@ Plug 'prettier/vim-prettier', {
 "Plug 'rktjmp/lush.nvim'
 "Plug 'bluz71/vim-moonfly-colors'
 
+Plug "zhou13/vim-easyescape"
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'} " autocomplete
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
@@ -113,8 +115,7 @@ set signcolumn=yes
 "set guicursor=i:block
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-:imap jj <Esc>
+inoremap jj <Esc>
 
 " Switch tabs
 nnoremap tk  :tabnext<CR>
