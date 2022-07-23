@@ -4,5 +4,7 @@ albert.TabOut
 formulahendry.auto-rename-tag
 esbenp.prettier-vscode
 dbaeumer.vscode-eslint
+emmanuelbeziat.vscode-great-icons
+sdras.night-owl
 
 while read line; do code --install-extension "$line";done < vscode-extensions.txt

@@ -9,7 +9,15 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorBlinking": "phase",
   "editor.minimap.enabled": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "500",
+  "editor.guides.bracketPairs": true,
+  "explorer.compactFolders": false,
+  "terminal.integrated.fontSize": 13,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.iconTheme": "vscode-great-icons",
 
   // Prettier
   "prettier.jsxSingleQuote": true,
@@ -36,6 +44,46 @@
     {
       "before": ["leader", "q"],
       "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "0"],
+      "commands": ["workbench.action.lastEditorInGroup"]
+    },
+    {
+      "before": ["leader", "1"],
+      "commands": ["workbench.action.openEditorAtIndex1"]
+    },
+    {
+      "before": ["leader", "2"],
+      "commands": ["workbench.action.openEditorAtIndex2"]
+    },
+    {
+      "before": ["leader", "3"],
+      "commands": ["workbench.action.openEditorAtIndex3"]
+    },
+    {
+      "before": ["leader", "4"],
+      "commands": ["workbench.action.openEditorAtIndex4"]
+    },
+    {
+      "before": ["leader", "5"],
+      "commands": ["workbench.action.openEditorAtIndex5"]
+    },
+    {
+      "before": ["leader", "6"],
+      "commands": ["workbench.action.openEditorAtIndex6"]
+    },
+    {
+      "before": ["leader", "7"],
+      "commands": ["workbench.action.openEditorAtIndex7"]
+    },
+    {
+      "before": ["leader", "8"],
+      "commands": ["workbench.action.openEditorAtIndex8"]
+    },
+    {
+      "before": ["leader", "9"],
+      "commands": ["workbench.action.openEditorAtIndex9"]
     }
   ],
   "vim.easymotion": true,
@@ -43,10 +91,8 @@
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
-    "<C-w>": false
-  },
-
-  "terminal.integrated.fontSize": 13,
-  "explorer.compactFolders": false,
-  "workbench.colorTheme": "GitHub Dark Default"
+    "<C-w>": false,
+    "<C-b>": false,
+    "<C-space>": false
+  }
 }
