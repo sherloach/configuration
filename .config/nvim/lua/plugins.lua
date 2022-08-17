@@ -46,4 +46,7 @@ packer.startup(function(use)
     'phaazon/hop.nvim', -- easymotion-like
     branch = 'v2'
   }
+  use 'tpope/vim-commentary'
+  use 'psliwka/vim-smoothie'
+  use 'sainnhe/everforest'
 end)
