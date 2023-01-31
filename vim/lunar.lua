@@ -15,7 +15,7 @@ lvim.format_on_save = true
 -- vim.g.gruvbox_contrast_dark = 'hard'
 
 -- vim.g.ayucolor = 'mirage'
-lvim.colorscheme = "ayu-mirage"
+lvim.colorscheme = "nordic"
 
 vim.g.indentLine_char = '│'
 
@@ -178,7 +178,7 @@ linters.setup {
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "javascript", "python" },
   },
-	{
+  {
     command = "eslint_d",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "python" },
@@ -187,7 +187,7 @@ linters.setup {
 
 local code_actions = require "lvim.lsp.null-ls.code_actions"
 code_actions.setup {
-  { 
+  {
     exe = "eslint_d",
     filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
   },
@@ -195,7 +195,7 @@ code_actions.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-	{
+  {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
@@ -204,72 +204,72 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
     end,
   },
-	{
+  {
     "f-person/git-blame.nvim",
     event = "BufRead",
     config = function()
       vim.cmd "highlight default link gitblame SpecialComment"
-        vim.g.gitblame_enabled = 0
+      vim.g.gitblame_enabled = 0
     end,
   },
   {
     "norcalli/nvim-colorizer.lua",
-      config = function()
-        require("colorizer").setup({ "css", "scss", "html", "javascript", "typescript", "typescriptreact" }, {
-          RGB = true, -- #RGB hex codes
-          RRGGBB = true, -- #RRGGBB hex codes
-          RRGGBBAA = true, -- #RRGGBBAA hex codes
-          rgb_fn = true, -- CSS rgb() and rgba() functions
-          hsl_fn = true, -- CSS hsl() and hsla() functions
-          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-          })
-      end,
+    config = function()
+      require("colorizer").setup({ "css", "scss", "html", "javascript", "typescript", "typescriptreact" }, {
+        RGB = true, -- #RGB hex codes
+        RRGGBB = true, -- #RRGGBB hex codes
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+        rgb_fn = true, -- CSS rgb() and rgba() functions
+        hsl_fn = true, -- CSS hsl() and hsla() functions
+        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+      })
+    end,
   },
-  {"morhetz/gruvbox"},
-	{
+  { "morhetz/gruvbox" },
+  {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
       require("catppuccin").setup({
         flavour = "macchiato", -- latte, frappe, macchiato, mocha
         background = { -- :h background
-            light = "latte",
-            dark = "macchiato",
+          light = "latte",
+          dark = "macchiato",
         },
         transparent_background = false,
         term_colors = false,
         dim_inactive = {
-            enabled = false,
-            shade = "dark",
-            percentage = 0.15,
+          enabled = false,
+          shade = "dark",
+          percentage = 0.15,
         },
         no_italic = false, -- Force no italic
         no_bold = false, -- Force no bold
         styles = {
-            comments = { "italic" },
-            conditionals = { "italic" },
-            loops = {},
-            functions = {},
-            keywords = {},
-            strings = {},
-            variables = {},
-            numbers = {},
-            booleans = {},
-            properties = {},
-            types = {},
-            operators = {},
+          comments = { "italic" },
+          conditionals = { "italic" },
+          loops = {},
+          functions = {},
+          keywords = {},
+          strings = {},
+          variables = {},
+          numbers = {},
+          booleans = {},
+          properties = {},
+          types = {},
+          operators = {},
         },
         color_overrides = {},
         custom_highlights = {},
         integrations = {
-            cmp = true,
-            gitsigns = true,
-            nvimtree = true,
-            telescope = true,
-            notify = false,
-            mini = false,
-            -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+          cmp = true,
+          gitsigns = true,
+          nvimtree = true,
+          telescope = true,
+          notify = false,
+          mini = false,
+          -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
         },
       })
     end
@@ -293,7 +293,10 @@ lvim.plugins = {
   },
   {
     "EdenEast/nightfox.nvim"
-  }
+  },
+  {
+    "AlexvZyl/nordic.nvim"
+  },
   -- {
   --   "sainnhe/everforest"
   -- },
